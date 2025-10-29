@@ -1,3 +1,9 @@
+# arquivos e diretorios especificos
+models_output/
+diabetes.zip
+diabetes.csv
+preprocessor.joblib
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
