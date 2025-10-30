@@ -56,24 +56,24 @@ SWAGGER_SPEC = {
                         "schema": {
                             "type": "object",
                             "properties": {
-                                "Pregnancies": {"type": "number"},
-                                "Glucose": {"type": "number"},
-                                "BloodPressure": {"type": "number"},
-                                "SkinThickness": {"type": "number"},
-                                "Insulin": {"type": "number"},
-                                "BMI": {"type": "number"},
-                                "DiabetesPedigreeFunction": {"type": "number"},
-                                "Age": {"type": "number"}
+                                "Pregnancies": { "type": "number", "description": "Número de gestações (contagem)" },
+                                "Glucose": { "type": "number", "description": "Concentração plasmática de glicose (mg/dL)" },
+                                "BloodPressure": { "type": "number", "description": "Pressão arterial diastólica (mm Hg)" },
+                                "SkinThickness": { "type": "number", "description": "Espessura do dobramento cutâneo do tríceps (mm)" },
+                                "Insulin": { "type": "number", "description": "Insulina sérica em 2 horas (μU/ml)" },
+                                "BMI": { "type": "number", "description": "Índice de massa corporal (kg/m²)" },
+                                "DiabetesPedigreeFunction": { "type": "number", "description": "Probabilidade de diabetes com base em histórico familiar (sem unidade)" },
+                                "Age": { "type": "number", "description": "Idade do paciente (anos)" }
                             },
                             "example": {
                                 'Pregnancies': 2.0,
-                                'Glucose': 100.0,
-                                'BloodPressure': 80.0,
-                                'SkinThickness': 32.0,
-                                'Insulin': 80.0,
-                                'BMI': 32.0,
-                                'DiabetesPedigreeFunction': 0.37,
-                                'Age': 29.0
+                                'Glucose': 100.0, # (mg/dL)
+                                'BloodPressure': 80.0, # (mm Hg)
+                                'SkinThickness': 32.0, # (mm)
+                                'Insulin': 80.0, # (μU/ml)
+                                'BMI': 32.0, #(kg/m²)
+                                'DiabetesPedigreeFunction': 0.37, #Prob. de diabetes com base em hist. familiar
+                                'Age': 29.0 # years
                             }
                         }
                     }
@@ -90,7 +90,17 @@ SWAGGER_SPEC = {
                         }
                     },
                     "400": {
-                        "description": "Invalid input"
+                        "description": "Invalid input",
+                        "example": {
+                                'Pregnancies': 2.0,
+                                'Glucose': 100.0, # (mg/dL)
+                                'BloodPressure': 80.0, # (mm Hg)
+                                'SkinThickness': 32.0, # (mm)
+                                'Insulin': 80.0, # (μU/ml)
+                                'BMI': 32.0, #(kg/m²)
+                                'DiabetesPedigreeFunction': 0.37, #Prob. de diabetes com base em hist. familiar
+                                'Age': 29.0 # years
+                            }
                     },
                     "500": {
                         "description": "Internal server error"

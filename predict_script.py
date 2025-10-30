@@ -46,13 +46,13 @@ if __name__ == '__main__':
     # Troque o valor pelos dados de vdd
     sample_data = {
         'Pregnancies': 2.0,
-        'Glucose': 100.0,
-        'BloodPressure': 80.0,
-        'SkinThickness': 32.0,
-        'Insulin': 80.0,
-        'BMI': 32.0,
-        'DiabetesPedigreeFunction': 0.37,
-        'Age': 29.0
+        'Glucose': 100.0, # (mg/dL)
+        'BloodPressure': 80.0, # (mm Hg)
+        'SkinThickness': 32.0, # (mm)
+        'Insulin': 80.0, # (μU/ml)
+        'BMI': 32.0, #(kg/m²)
+        'DiabetesPedigreeFunction': 0.37, #Prob. de diabetes com base em hist. familiar
+        'Age': 29.0 # years
     }
 
     prediction = predict_diabetes(sample_data)

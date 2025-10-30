@@ -33,6 +33,18 @@ curl -L -o ~/Downloads/diabetes-dataset-from-kaggle.zip\
   https://www.kaggle.com/api/v1/datasets/download/ayushmanyashaswi/diabetes-dataset-from-kaggle
 ```
 
+Sobre as colunas, apresenta-se o significado e a unidade a seguir:
+
+- **Pregnancies:** Número de gestações.
+- **Glucose:** Concentração plasmática de glicose (mg/dL).
+- **BloodPressure:** Pressão arterial diastólica (mm Hg).
+- **SkinThickness:** Espessura do dobramento cutâneo do tríceps (mm).
+- **Insulin:** Insulina sérica em 2 horas (μU/ml).
+- **BMI:** Índice de massa corporal (kg/m²).
+- **DiabetesPedigreeFunction:** Probabilidade de diabetes com base em histórico familiar.
+- **Age:** Idade do paciente (anos).
+- **Outcome:** Variável alvo (0: Não diabético, 1: Diabético).
+
 ---
 
 ## 🧩 Estrutura do Projeto
@@ -85,6 +97,21 @@ Requisições à raiz redirecionam automaticamente para a **documentação Swagg
 
 ## 🧪 Testando a API
 
+Considere um paciente com essas informações:
+
+```python
+    person =  {
+        'Pregnancies': 2.0, # Quant. de gestações
+        'Glucose': 100.0, # (mg/dL) - Concentração plasmática de glicose 
+        'BloodPressure': 80.0, # (mm Hg) - Pressão arterial 
+        'SkinThickness': 32.0, # (mm) - Espessura do dobramento cutâneo do tríceps 
+        'Insulin': 80.0, # (μU/ml) - Insulina sérica em 2 horas
+        'BMI': 32.0, # (kg/m²) - Índice de massa corporal
+        'DiabetesPedigreeFunction': 0.37, # Prob. de diabetes com base em hist. familiar
+        'Age': 29.0 # anos
+    }
+```
+
 Você pode realizar requisições via terminal com **cURL**:
 
 ```bash
@@ -129,6 +156,15 @@ docker build -t flask-diabetes-app .
 ```bash
 docker run -d -p 5000:5000 --name flask-diabetes-container flask-diabetes-app
 ```
+
+A aplicação estará disponível em:
+
+- [http://localhost:5000](http://localhost:5000)
+- [http://127.0.0.1:5000](http://127.0.0.1:5000)
+
+Requisições à raiz redirecionam automaticamente para a **documentação Swagger**:
+
+- [http://localhost:5000/swagger](http://localhost:5000/swagger)
 
 ### Visualizar logs
 
