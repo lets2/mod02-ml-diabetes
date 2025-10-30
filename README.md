@@ -52,6 +52,14 @@ curl -L -o ~/Downloads/diabetes-dataset-from-kaggle.zip\
 
 ## ⚙️ Instalação e Execução
 
+A partir da raiz do projeto, inicie o notebook jupyter:
+
+```bash
+jupyter notebook
+```
+
+Na aba que se abre no navegador, acesse o notebook e execute todas as células:
+
 Instale as dependências necessárias:
 
 ```bash

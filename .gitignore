@@ -1,8 +1,10 @@
 # arquivos e diretorios especificos
-models_output/
 diabetes.zip
 diabetes.csv
-preprocessor.joblib
+
+models_output/*
+!models_output/
+!models_output/full_prediction_pipeline.joblib
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
