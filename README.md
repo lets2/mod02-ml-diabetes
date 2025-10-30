@@ -58,7 +58,7 @@ A partir da raiz do projeto, inicie o notebook jupyter:
 jupyter notebook
 ```
 
-Na aba que se abre no navegador, acesse o notebook e execute todas as células:
+Na aba que se abre no navegador, acesse o notebook e execute todas as células.
 
 Instale as dependências necessárias:
 
